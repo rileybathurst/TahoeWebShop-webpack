@@ -1,0 +1,41 @@
+// scroll snap
+.container {
+  display: flex;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.container.y {
+  height: 100vh;
+  flex-flow: column nowrap;
+}
+
+.y.mandatory-scroll-snapping {
+  scroll-snap-type: y mandatory;
+}
+
+.container > div,
+.container > header,
+.container > main,
+.container > section,
+.container > footer {
+  scroll-snap-align: center;
+  flex: none;
+  height: 90%;
+}
+
+.items {
+  display: grid;
+  grid-gap: 2em;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+
+  @media (min-width: 66em) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.items > article {
+  max-width: 22em;
+}
