@@ -1,0 +1,47 @@
+.grid {
+  display: grid;
+}
+
+.grid-place-center {
+  place-self: center;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.ji-c {
+  justify-items: center;
+}
+
+.as-e {
+  align-self: end;
+}
+
+.js-s {
+  justify-self: start;
+}
+
+.js-c {
+  justify-self: center;
+}
+
+.gr-1 {
+  grid-row: 1;
+}
+
+.gr-2 {
+  grid-row: 2;
+}
+
+.gr-3 {
+  grid-row: 3;
+}
+
+.gc-1-4 {
+  grid-column: 1/4;
+}
+
+.gc-1 {
+  grid-column: 1;
+}

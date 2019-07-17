@@ -1,5 +1,6 @@
   $black: #0A0A0A;
   $white: #FAFAFA;
+  $primary: rgb(242,201,76);
   $primary__dark: #bb6a1b;
 
 body {
@@ -26,13 +27,28 @@ ul {
   list-style-type: none;
 }
 
+input {
+  padding: 1em;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1.5em;
+  font-size: 1.25em;
+  caret-color: $primary;
+  border-color: $primary;
+}
+
+button {
+  background: linear-gradient(-45deg, rgb(242,201,76) 0%, rgb(242,153,74) 100%);
+  padding: 1em;
+  border-radius: 4px;
+  color: $white;
+  // border: none;
+  font-size: 1.25em;
+}
+
 svg {
   display: block;
   margin-bottom: 1.5em;
-}
-
-.grid-place-center {
-  place-self: center;
 }
 
 .measure {
@@ -61,14 +77,19 @@ svg {
   height: 90vh;
 }
 
+.lake a {
+  color: $white;
+}
+
 .vert {
   writing-mode: vertical-rl;
 }
 
-.as-e {
-  align-self: end;
+.shadow {
+  filter: drop-shadow(4px 4px 2px #cacaca);
+  transition-duration: 350ms;
 }
 
-.js-c {
-  justify-self: center;
+.shadow:hover {
+  filter: drop-shadow(10px 10px 8px #5c5c5c);
 }
