@@ -7,7 +7,6 @@ body {
   font-family: sans-serif;
   font-size: 18px;
   line-height: 1.5;
-  scroll-snap-type: y mandatory;
   color: $black;
   // cursor: url("svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' circle cx='50' cy='50' r='50' /svg");
 }
@@ -48,7 +47,11 @@ button {
 
 svg {
   display: block;
-  margin-bottom: 1.5em;
+  // margin-bottom: 1.5em; not always needs to be on a classs
+}
+
+.width-100 {
+  width: 100%;
 }
 
 .measure {

@@ -18,8 +18,8 @@
   <body>
     <div class="container y mandatory-scroll-snapping" dir="ltr">
       <header id="top" class="light three">
-        <nav class="vert gr-1 gc-1-4">
-          <ul style="width: 100%; display: flex; flex-direction: column-reverse; justify-content: space-between;">
+        <nav class="vert gr-1 gc-1-4 width-100">
+          <ul class="top-nav">
             <li style="--animation-order: 1;"><a href="#about">About//</a></li>
             <li style="--animation-order: 2;"><a href="#portfolio">Portfolio//</a></li>
             <li style="--animation-order: 3;"><a href="#contact">Contact//</a></li>
@@ -64,15 +64,33 @@
           <h3>The web should only be as complex as you need.</h3>
           <p>From initial setup of a site to additional features as your company grows and you’re reach expands.</p>
 
-          <video autoplay loop muted style="max-width: 200px; border-radius: 50%;">
-            <source src="/static/drone-selfie.webm"
+          <div class="circles">
+            <svg height="300" width="300" class="gr-1 gc-1-4 turn">
+              <path id="profile"
+                fill="none"
+                d="
+                  M 150, 150
+                  m -150, 0
+                  a 100,100 0 1,0 300,0
+                  a 100,100 0 1,0 -300,0
+                "
+              />
+              <text width="150">
+                <textPath xlink:href="#profile">
+                  <a href="/riley">Riley Bathurst</a>
+                </textPath>
+              </text>
+            </svg>
+            <video autoplay loop muted style="max-width: 200px; border-radius: 50%;">
+              <source src="/static/drone-selfie.webm"
                 type="video/webm">
 
-            <source src="/static/drone-selfie.mp4"
-                    type="video/mp4">
+              <source src="/static/drone-selfie.mp4"
+                type="video/mp4">
 
-            <p>Sorry, Your browser doesn't support HTML5 video. Here is a <a href="myVideo.mp4">link to the video</a> instead.</p>
-          </video>
+              <p>Sorry, Your browser doesn't support HTML5 video. Here is a <a href="myVideo.mp4">link to the video</a> instead.</p>
+            </video>
+          </div>
         </div>
         <p class="vert" style="grid-row: 3; grid-column: 3; align-self: center;"><a href="#top">Tahoe Web Shop</a></p>
       </main>
@@ -173,11 +191,11 @@
 
           <form action="/contact.php" method="post" style="width: 100%;">
             <label for="name">Name:*</label><br>
-            <input type="text" id="name" name="user_name" placeholder="Name"><br>
+            <input type="text" id="name" name="user_name" placeholder="Name" required><br>
             <label for="mail">E-mail:*</label><br>
-            <input type="email" id="mail" name="user_mail" placeholder="email"><br>
+            <input type="email" id="mail" name="user_mail" placeholder="email" required><br>
             <label for="favourite">What&#39;s your favourite website&#63;*</label><br>
-            <input type="text" id="favourite" name="user_favourite" placeholder="What&#39;s your favourite website&#63;"><br>
+            <input type="text" id="favourite" name="user_favourite" placeholder="What&#39;s your favourite website&#63;" required><br>
 
             <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
 
