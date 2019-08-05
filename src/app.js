@@ -6,7 +6,7 @@ if (document.getElementById('first') !=null) {
   console.log(intElemOffsetWidth);
 }
 
-import _ from 'lodash';
+// import _ from 'lodash';
 
 /* IntersectionObserver to rotate the text around the profile image
 if ('IntersectionObserver' in window &&
