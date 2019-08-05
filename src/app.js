@@ -1,6 +1,14 @@
+// portfolio triptych
+if (document.getElementById('first') !=null) {
+  var intElemOffsetWidth = document.getElementById('first').offsetWidth; // why isnt this working?
+
+  document.getElementById('snap-scroll-container-coordinates').scrollLeft += intElemOffsetWidth;
+  console.log(intElemOffsetWidth);
+}
+
 import _ from 'lodash';
 
-// IntersectionObserver to rotate the text around the profile image
+/* IntersectionObserver to rotate the text around the profile image
 if ('IntersectionObserver' in window &&
 'IntersectionObserverEntry' in window &&
 'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
@@ -57,3 +65,5 @@ if ('IntersectionObserver' in window &&
   });
   }
 }
+*/
+

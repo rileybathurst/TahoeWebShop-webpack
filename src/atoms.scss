@@ -41,13 +41,7 @@ button {
   padding: 1em;
   border-radius: 4px;
   color: $white;
-  // border: none;
   font-size: 1.25em;
-}
-
-svg {
-  display: block;
-  // margin-bottom: 1.5em; not always needs to be on a classs
 }
 
 .width-100 {
@@ -57,6 +51,13 @@ svg {
 .measure {
   max-width: 44em;
   margin: 0 auto;
+  grid-row: 2;
+  grid-column: 1/4;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // this isnt dropping down on small
 }
 
 .text-center {
@@ -73,6 +74,10 @@ svg {
   color: $primary__dark;
 }
 
+.light a:hover {
+  text-decoration: line-through;
+}
+
 .lake {
   background: rgb(0,0,70);
   background: linear-gradient(0deg, rgba(0,0,70,1) 0%, rgba(28,181,224,1) 100%);
@@ -84,17 +89,21 @@ svg {
   color: $white;
 }
 
+.lake a:hover {
+  text-decoration: line-through;
+}
+
 .vert {
   writing-mode: vertical-rl;
 }
 
 .shadow {
-  filter: drop-shadow(4px 4px 2px #cacaca);
+  filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.2));
   transition-duration: 350ms;
 }
 
 .shadow:hover {
-  filter: drop-shadow(10px 10px 8px #5c5c5c);
+  filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.4));
 }
 
 .out {
@@ -107,4 +116,96 @@ svg {
 
 .light .out {
   -webkit-text-stroke: 1.5px $primary__dark;
+}
+
+.tweet:hover {
+  fill: rgb(242,201,76);
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  animation: rotating 2s linear infinite;
+  stroke-linecap: round;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.rotating circle {
+  fill: none;
+  stroke-width: 3.5;
+
+  &:nth-of-type(1) {
+    stroke-dasharray: 400;
+  }
+
+  &:nth-of-type(2) {
+    stroke-dasharray: 300;
+  }
+
+  &:nth-of-type(3) {
+    stroke-dasharray: 200;
+  }
+}
+
+@keyframes pop
+{
+  0% {
+    stroke-width: 0;
+    stroke-opacity: 1;
+  }
+  100% {
+    stroke-width: 8;
+    stroke-opacity: 0;
+  }
+}
+
+.paths {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.paths path {
+  &:nth-of-type(1) {
+    animation: pop 2s infinite ease;
+    stroke: rgba(0, 0, 0, 0.2);
+  }
+}
+
+.logo-pop circle {
+  animation: pop 2s infinite ease;
+  stroke: rgba(0, 0, 0, 0.2);
+}
+
+/* currently not used
+@keyframes pulse
+{
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+  }
+}
+
+.example-1
+{
+  border-radius: 45%;
+  animation: pulse 1s infinite;
+} */
+
+.bw {
+  filter: grayscale(1);
+  mix-blend-mode: multiply;
+  transition-duration: 350ms;
+}
+
+.bw:hover {
+  mix-blend-mode: normal;
 }
