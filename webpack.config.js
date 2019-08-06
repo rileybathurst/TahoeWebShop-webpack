@@ -3,13 +3,15 @@ const autoprefixer = require('autoprefixer');
 const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
-  entry: ['./src/app.scss', './src/app.js', './index.html',
+  entry: ['./src/app.scss', './src/app.js',
+          './index.html',
           './src/contact.html',
           './src/features.html',
           './src/portfolio.html',
           './src/spam.html',
           './src/team.html',
           './src/thanks.html',
+          './src/404.html',
          ],
   output: {
     filename: 'bundle.js',
