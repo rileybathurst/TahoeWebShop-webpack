@@ -1,0 +1,33 @@
+// Templates are page-level objects that place components into a layout and articulate the design’s underlying content structure.
+
+// scroll snap
+.y-scroll-snapping {
+  display: flex;
+  overflow: auto;
+  scroll-behavior: smooth;
+  height: 100vh;
+  flex-flow: column nowrap;
+  scroll-snap-type: y mandatory;
+  -webkit-scroll-snap-type: mandatory;
+  scroll-snap-destination: 50% 50%;
+  -webkit-scroll-snap-destination: 50% 50%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.y-scroll-snapping > div,
+.y-scroll-snapping > header,
+.y-scroll-snapping > main,
+.y-scroll-snapping > section,
+.y-scroll-snapping > footer {
+  -webkit-scroll-snap-coordinate: 50% 50%;
+  scroll-snap-align: center;
+  flex: none;
+  height: 90%;
+}
+
+.light,
+.lake {
+  display: grid;
+  grid-template-columns: 1fr minmax(min-content, 44em) 1fr;
+  padding: 2em;
+}

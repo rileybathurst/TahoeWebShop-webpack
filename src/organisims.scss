@@ -1,12 +1,78 @@
-.three {
+// Organisms are relatively complex UI components composed of groups of molecules and/or atoms and/or other organisms. These organisms form distinct sections of an interface.
+
+header {
+  background: $light-fallback;
+  background: $light;
+  height: 90vh;
+
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr minmax(min-content, 44em) 1fr;
   padding: 2em;
 }
 
-.icon {
-  display: grid;
-  justify-items: center;
+header nav {
+  writing-mode: vertical-rl;
+  grid-row: 1;
+  grid-column: 1/4;
+  width: 100%;
 }
 
+header ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
 
+.major {
+  grid-row: 2;
+  grid-column: 1/4;
+  place-self: center;
+  grid-auto-columns: min-content;
+
+  display: grid; // add subgird here to futureproof and as example
+}
+
+.major svg {
+  grid-row: 1;
+  grid-column: 1/3;
+}
+
+.major h1 {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.major p {
+  text-align: center;
+}
+
+header .pedestal {
+  grid-row: 3;
+  align-self: end;
+  justify-self: center;
+}
+
+.pedestal svg {
+  margin: 0 auto;
+}
+
+main {
+  background: $lake-fallback;
+  background: $lake;
+  color: $white;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr minmax(min-content, 44em) 1fr;
+  // padding: 2em; // I had this but portfolio cant go full width
+}
+
+main a {
+  color: $white;
+}
+
+.focal {
+  margin: 0 auto;
+  grid-row: 2;
+  grid-column: 1/4;
+}
