@@ -9,6 +9,15 @@
 
   display: grid; // this might be overkill or needs sub grid to be easier to understand
   place-items: center;
+
+  grid-auto-rows: min-content;
+}
+
+/* max width - smallish */
+#portfolio > article {
+  @media (max-width: 66em) {
+    max-height: 33%;
+  }
 }
 
 #portfolio > article:nth-child(2) {
@@ -29,6 +38,7 @@
   }
 }
 
+/* min width - largish */
 #portfolio > article:nth-child(2) {
   @media (min-width: 66em) {
     grid-column: 1;
@@ -56,10 +66,17 @@
 #portfolio > article svg {
   grid-row: 1;
   grid-column: 1;
+  max-width: 100vw;
+  max-height: 100%;
 }
 
 #portfolio > article > svg {
   z-index: -1;
+  max-width: 100%;
+}
+
+#portfolio > article > a > picture {
+  max-width: 100%;
 }
 
 #contact article {
