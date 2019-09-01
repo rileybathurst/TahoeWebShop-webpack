@@ -1,10 +1,14 @@
 // relatively simple groups of UI elements functioning together as a unit. For example, a form label, search input, and button can join together to create a search form molecule.
 
+#portfolio > .label {
+  grid-column: 1;
+}
+
 #portfolio > article {
   grid-row: 2;
   grid-column: 2;
   place-items: center;
-  max-width: 22em;
+  max-width: 30em;
   margin: 0 auto;
 
   display: grid; // this might be overkill or needs sub grid to be easier to understand
@@ -16,6 +20,7 @@
 /* max width - smallish */
 #portfolio > article {
   @media (max-width: 66em) {
+    grid-column: 1/4;
     max-height: 33%;
   }
 }
@@ -60,6 +65,7 @@
 #portfolio > article h3 {
   grid-row: 2;
   grid-column: 1;
+  text-align: center;
 }
 
 #portfolio > article a,

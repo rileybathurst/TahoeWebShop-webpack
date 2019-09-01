@@ -30,10 +30,33 @@ a:hover {
 }
 
 h1 {
-  font-size: 48px;
   font-weight: bold;
   padding: 1em;
   border: 8px solid $black;
+}
+
+h1 { // https://type-scale.com Major Third
+  font-size: 3.052em;
+}
+
+h2 {
+  font-size: 2.441em;
+}
+
+h3 {
+  font-size: 1.953em;
+}
+
+h4 {
+  font-size: 1.563em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+small, .text_small {
+  font-size: 0.8em;
 }
 
 img {
@@ -70,44 +93,30 @@ input {
   margin-bottom: 1.5em;
   font-size: 1.25em;
   caret-color: $primary;
-  border-color: $primary;
+  border: 2px transparent solid;
+}
+
+input:focus {
+  border: 2px $primary solid;
 }
 
 button {
   background: linear-gradient(-45deg, rgb(242,201,76) 0%, rgb(242,153,74) 100%);
   padding: 1em;
+  border: none;
   border-radius: 4px;
   color: $white;
   font-size: 1.25em;
 }
 
+button:hover {
+  background: linear-gradient(-45deg, #d6ad30 0%, #cd7425 100%);
+  filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.2));
+}
+
 .screen-reader {
   visibility: hidden;
 }
-
-/*.width-100 {
-  width: 100%;
-} */
-
-/* .icon {
-  display: grid;
-  justify-items: center;
-} */
-
-/* .measure {
-  margin: 0 auto;
-  grid-row: 2;
-  grid-column: 1/4;
-} */
-
-/* .profile {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // this isnt dropping down on small
-} */
-
-/* .text-center {
-  text-align: center;
-} */
 
 .light {
   background: $light-fallback;
@@ -129,9 +138,14 @@ button {
   color: $white;
 }
 
-/* .vert {
-  writing-mode: vertical-rl;
-} */
+#portfolio {
+  background: $light-fallback;
+  background: $light;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: $three;
+  padding: 2em;
+}
 
 .label {
   grid-row: 1;

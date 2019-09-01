@@ -31,3 +31,10 @@
   grid-template-columns: 1fr minmax(min-content, 44em) 1fr;
   padding: 2em;
 }
+
+
+#portfolio {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2em;
+}
