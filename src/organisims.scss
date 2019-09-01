@@ -58,6 +58,16 @@ header .pedestal {
   justify-self: center;
 }
 
+.p1 {
+  grid-column: 1;
+}
+.p2 {
+  grid-column: 2;
+}
+.p3 {
+  grid-column: 3;
+}
+
 .pedestal svg {
   margin: 0 auto;
 }

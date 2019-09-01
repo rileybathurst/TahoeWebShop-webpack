@@ -244,3 +244,8 @@ button:hover {
   animation: pop 2s infinite ease;
   stroke: rgba(0, 0, 0, 0.2);
 }
+
+.grad {
+  fill: red;
+  fill: $light;
+}

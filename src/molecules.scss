@@ -120,9 +120,13 @@
 .circles video {
   grid-row: 1;
   grid-column: 1;
-
   transition-duration: 5s;
   transition-timing-function: ease-out;
+  border-radius: 50%;
+}
+
+.circles video {
+  max-width: 200px;
 }
 
 .circles text {
