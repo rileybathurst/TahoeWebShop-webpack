@@ -4,7 +4,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   entry: ['./src/app.scss', './src/app.js',
-          './index.html',
+          './src/index.html',
           './src/contact.html',
           './src/features.html',
           './src/portfolio.html',
