@@ -1,6 +1,6 @@
 // portfolio triptych
 if (document.getElementById('first') !=null) {
-  var intElemOffsetWidth = document.getElementById('first').offsetWidth; // why isnt this working?
+  var intElemOffsetWidth = document.getElementById('first').offsetWidth;
 
   document.getElementById('snap-scroll-container-coordinates').scrollLeft += intElemOffsetWidth;
   console.log(intElemOffsetWidth);
