@@ -34,7 +34,7 @@ header ul {
   max-width: 44em;
 }
 
-.major svg {
+.major object {
   grid-row: 1/4;
   grid-column: 1/4;
   max-width: 44em;
@@ -79,15 +79,23 @@ main {
   height: 90vh;
   display: grid;
   grid-template-columns: 1fr minmax(min-content, 44em) 1fr;
-  // padding: 2em; // I had this but portfolio cant go full width
 }
 
 main a {
   color: $white;
 }
 
+main > h2 {
+  padding-top: 1em;
+}
+
 .focal {
   margin: 0 auto;
   grid-row: 2;
-  grid-column: 1/4;
+  @media (max-width: 28em) {
+    grid-row: 1/3;
+    align-self: center;
+  }
+  grid-column: 2;
+  // padding: 2em;
 }

@@ -1,9 +1,9 @@
 // basic HTML elements like form labels, inputs, buttons, and others that can’t be broken down any further without ceasing to be functional.
 
 $black: #0A0A0A;
-  $white: #FAFAFA;
-  $primary: rgb(242,201,76);
-  $primary__dark: #bb6a1b;
+$white: #FAFAFA;
+$primary: rgb(242,201,76);
+$primary__dark: #bb6a1b;
 
 $light-fallback: rgb(242,201,76);
 $light: linear-gradient(-45deg, rgba(242,201,76,0.5) 0%, rgba(242,153,74,0.5) 100%);
@@ -12,6 +12,11 @@ $lake-fallback: rgb(0,0,70);
 $lake: linear-gradient(0deg, rgba(0,0,70,1) 0%, rgba(28,181,224,1) 100%);
 
 $three: 1fr minmax(min-content, 44em) 1fr;
+
+// <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+//  <stop offset="0%" style="stop-color:rgb(242,201,76);stop-opacity:0.5" />
+//  <stop offset="100%" style="stop-color:rgb(242,153,74);stop-opacity:0.5" />
+// </linearGradient>
 
 body {
   font-family: sans-serif;
@@ -45,6 +50,9 @@ h2 {
 
 h3 {
   font-size: 1.953em;
+  @media (max-width: 24em) {
+    font-size: 1.563em;
+  }
 }
 
 h4 {
@@ -88,7 +96,8 @@ li { // this is way too complex for the base element
 
 input {
   padding: 1em;
-  width: 100%;
+  width: 80%;
+  width: calc(100% - 2em); // deals with padding on small sizes
   border-radius: 4px;
   margin-bottom: 1.5em;
   font-size: 1.25em;
@@ -149,6 +158,9 @@ button:hover {
 
 .label {
   grid-row: 1;
+  @media (max-width: 22em) {
+    grid-row: 1/3;
+  }
   justify-self: start;
   writing-mode: vertical-rl;
   margin: 0;
@@ -156,9 +168,13 @@ button:hover {
 
 .return {
   grid-row: 3;
+  @media (max-width: 33em) {
+    grid-row: 2/4;
+  }
   grid-column: 3;
   writing-mode: vertical-rl;
   align-self: center; // to be above recaptcha when shown
+  margin: 0;
 }
 
 .shadow {
