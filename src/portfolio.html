@@ -2,6 +2,42 @@
 <html lang="en-US">
   <head>
     <title>Tahoe Web Shop - Portfolio</title>
+    <!-- schema -->
+    <meta name="author" content="Riley Bathurst">
+    <meta name="description" content="The web should only be as complex as you need">
+    <meta name="keywords" content="Tahoe, Website, web, online, development, build, shop">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ff0000">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- open graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tahoewebshop.com/">
+    <meta property="og:title" content="Tahoe Web Shop">
+    <meta property="og:image" content="https://tahoe-web-shop-og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:description" content="The web should only be as complex as you need">
+    <meta property="og:site_name" content="Tahoe Web Shop">
+    <meta property="og:locale" content="en_US">
+    <!-- Next tags are optional but recommended -->
+    <meta property="og:image:width" content="1080">
+    <meta property="og:image:height" content="1080">
+
+    <!-- twitter seo -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@TahoeWebShop">
+    <meta name="twitter:creator" content="@rileybathurst">
+    <meta name="twitter:url" content="https://tahoewebshop.com/">
+    <meta name="twitter:title" content="Tahoe Web Shop">
+    <meta name="twitter:description" content="The web should only be as complex as you need">
+    <meta name="twitter:image" content="https://tahoe-web-shop-og-image.png">
+
     <link rel="stylesheet" href="/bundle.css">
 
       <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -16,40 +52,33 @@
   </head>
   <body>
     <div class="container y mandatory-scroll-snapping" dir="ltr">
-      <header id="top" class="light three">
-        <nav class="vert gr-1 gc-1-4 width-100">
-          <ul class="top-nav">
+      <header id="top" class="module">
+        <nav>
+          <ul>
             <li style="--animation-order: 1;"><a href="../#about">About//</a></li>
             <li style="--animation-order: 2;"><a href="../#portfolio">Portfolio//</a></li>
             <li style="--animation-order: 3;"><a href="../#contact">Contact//</a></li>
           </ul>
         </nav>
-        <div class="grid-place-center grid gr-2 gc-1-4"  style="grid-auto-columns: min-content;">
-          <svg height="400" width="400" class="gr-1 gc-1-4 logo-pop">
-              <defs>
-                <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" style="stop-color:rgb(242,201,76);stop-opacity:0.5" />
-                  <stop offset="100%" style="stop-color:rgb(242,153,74);stop-opacity:0.5" />
-                </linearGradient>
-              </defs>
-              <circle cx="200" cy="200" r="200" fill="url(#grad1)"/>
-            </svg>
-          <h1 class="gr-1 gc-1">Port-<br />
-            folio</h1>
+        <div class="major">
+
+          <object type="image/svg+xml" data="/static/gradient-circle.svg" class="logo"></object>
+          <h1>Port-<br />
+          folio</h1>
         </div>
 
-        <div class="as-e js-c icon" style="grid-row: 3; grid-column: 1;">
-          <a href="/features.html#local" aria-label="local"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" class="shadow"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#bb6a1b"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+        <div class="pedestal p1">
+          <a href="/features.html#local" aria-label="local"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" class="shadow"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#0a0a0a"/><path d="M0 0h24v24H0z" fill="none"/></svg>
             Local</a>
         </div>
 
-        <div class="as-e js-c icon" style="grid-row: 3; grid-column: 2;">
-          <a href="/features.html#performance" aria-label="performance"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" class="shadow"><path d="M0 0h24v24H0z" fill="none"/><path d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z" fill="#bb6a1b"/></svg>
+        <div class="pedestal p2">
+          <a href="/features.html#performance" aria-label="performance"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" class="shadow"><path d="M0 0h24v24H0z" fill="none"/><path d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z" fill="#0a0a0a"/></svg>
             Performance</a>
         </div>
 
-        <div class="as-e js-c icon" style="grid-row: 3; grid-column: 3;">
-          <a href="/features.html#security" aria-label="security"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" class="shadow"><path d="M0 0h24v24H0z" fill="none"/><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" fill="#bb6a1b"/></svg>
+        <div class="pedestal p3">
+          <a href="/features.html#security" aria-label="security"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" class="shadow"><path d="M0 0h24v24H0z" fill="none"/><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" fill="#0a0a0a"/></svg>
             Security</a>
         </div>
       </header>

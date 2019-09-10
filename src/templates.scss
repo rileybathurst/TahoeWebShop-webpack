@@ -26,6 +26,11 @@
   width: calc(100% - 4em);
 }
 
+.y-scroll-snapping > .single-page { // needs > for specificity
+  height: 100%;
+  height: calc(100% - 4em);
+}
+
 .module { // fix for mobile height where other elements end up over the top of the content
   // https://codepen.io/team/css-tricks/pen/WKdJaB
   height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
