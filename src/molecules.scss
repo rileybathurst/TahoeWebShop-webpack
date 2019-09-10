@@ -125,8 +125,15 @@
   border-radius: 50%;
 }
 
+.circles svg {
+  max-width: 100%;
+}
+
 .circles video {
-  max-width: 200px;
+  max-width: 150px;
+  @media (min-width: 24em) {
+    max-width: 200px;
+  }
 }
 
 .circles text {
