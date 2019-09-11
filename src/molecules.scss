@@ -63,9 +63,10 @@
 }
 
 #portfolio > article h3 {
-  grid-row: 2;
+  grid-row: 1;
   grid-column: 1;
   text-align: center;
+  align-self: end;
 }
 
 #portfolio > article a,
@@ -146,7 +147,7 @@
   justify-content: space-between;
 }
 
-#snap-scroll-container-coordinates {
+.snap-scroll-container-coordinates {
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
